@@ -9,3 +9,15 @@
 // ora passate un argomento al vostro script e recuperatene il valore usando process e la proprietá argv per stamparlo in console
 
 console.log('hello node js');
+
+const pin = process.env.PIN;
+console.log(pin);
+
+const argomento = process.argv.slice(2);
+console.log(argomento);
+
+if (argomento === "admin" && pin === "23") {
+  console.log("Welcome Admin");
+} else {
+  console.log("Access restricted");
+}
